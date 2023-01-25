@@ -1,0 +1,50 @@
+[
+    {
+      "response_type": "greeting",
+      "user_input": ["hello", "hi", "hey", "howdy"],
+      "bot_response": "Hey there!",
+      "required_words": []
+    },
+    {
+      "response_type": "greeting",
+      "user_input": ["see you", "goodbye", "bye"],
+      "bot_response": "See you later!",
+      "required_words": []
+    },
+    {
+      "response_type": "greeting",
+      "user_input": ["nice", "to", "meet", "you"],
+      "bot_response": "The pleasure is all mine!",
+      "required_words": ["nice", "meet", "you"]
+    },
+    {
+      "response_type": "question",
+      "user_input": ["why", "can't", "I", "use", "text", "on", "an", "image"],
+      "bot_response": "Text, (also known as copy) does not scale correctly on images in all formats. This can cause the text to blur and not be legible.",
+      "required_words": ["text", "can't", "image"]
+    },
+    {
+        "response_type": "question",
+        "user_input": ["can", "you", "learn"],
+        "bot_response": "I can learn whatever Homer teaches me.",
+        "required_words": ["you", "learn"]
+      },
+    {
+      "response_type": "question",
+      "user_input": ["what", "is", "a", "pip"],
+      "bot_response": "A PIP is a product information page. PIP template creatives use product silhouette immages.",
+      "required_words": ["what", "pip"]
+    },
+    {
+      "response_type": "question",
+      "user_input": ["how", "are", "you"],
+      "bot_response": "I'm great! Thanks for asking.",
+      "required_words": ["how", "are", "you"]
+    },
+    {
+        "response_type": "question",
+        "user_input": ["how", "do", "you", "change", "the", "template", "type"],
+        "bot_response": "Go to the drop down on the smartform and select the type of template you would like to use.",
+        "required_words": ["how", "change", "template"]
+      }
+  ]

@@ -109,31 +109,49 @@
   {
     "id": 11,
     "keywords": [
-      "internship",
-      "employed",
-      "employment"
+      "disapproved",
+      "disapproval",
+      "creatives",
+      "banners"
     ],
-    "question": "Do you provide internship in the companies?",
-    "answer": "The majority of the students who complete these programs (over 80%) are immediately employed. There is a compulsory internship in the companies in some of the academies."
+    "question": "Why are my creatives being disapproved?",
+    "answer": "Creatives are disapproved when they do not meet The Home Depot's Selfe-Serve Creative Approval Brand Standards. Each disapproval generates an automated email that is sent to the person who submited the creative's email. This email contains a comment relevant to the action needed, and the catagory of disapproval type. If you still have questions about these disapprovals, please contact your Home Depot representative."
   },
   {
     "id": 12,
     "keywords": [
-      "technical",
-      "laptop",
-      "equipment",
-      "computer"
+      "split",
+      "divided",
+      "multiple",
+      "pictures",
+      "images"
     ],
-    "question": "Do I need to bring my own technical equipment to follow the lectures?",
-    "answer": "There are 7 computer laboratories equipped with all the equipment necessary for following the lectures and 2 rooms where you work with your laptop.\nAcademies at which bringing your personal equipment is compulsory: Visual Arts Academy and Software Test Academy."
+    "question": "Why can't I use multiple or split images?",
+    "answer": "Split images do not format correctly in either creative template and lead to blurred or cut off images. The same problem is encountered when multiple images are used. For the best results, please use a single high quality image that matches the format of your selected template. "
   },
   {
     "id": 13,
     "keywords": [
-      "start",
-      "enrollment"
+      "preview",
+      "see",
+      "view",
+      "creative"
     ],
-    "question": "What day do the academies start and what is the open enrollment period?",
-    "answer": "Each year, the lectures at the academies start on October 15th. The entries are open from February 1st and last until the beginning of the lectures or until all the vacancies are filled. We recommend that you book your place on time and to use the early-entry discounts."
+    "question": "How can I see a preview of my creative?",
+    "answer": "On the right side of the smartform there is a box with a live preview of your creative. On the top right of this container there is an icon of a magnifying glass. Click this icon to pull up a larger preview window. From here, click on the dropdown titled Format and select All Formats. This will display a preview of every format your creative can be viewd in. These include desktop, tablet, and mobile sizes. We recommend previewing every creative before you submit it for approval."
+  },
+  {
+    "id": 14,
+    "keywords": [
+      "Product",
+      "id",
+      "ids",
+      "find",
+      "select",
+      "sku",
+      "omsid"
+    ],
+    "question": "Where can I find a product id?",
+    "answer": "A product's ID can be found in the URL of its product landing page (PIP). It is the final set of numbers that are displayed after the last backslash of the URL."
   }
 ]

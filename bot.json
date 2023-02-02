@@ -153,5 +153,16 @@
     ],
     "question": "Where can I find a product id?",
     "answer": "A product's ID can be found in the URL of its product landing page (PIP). It is the final set of numbers that are displayed after the last backslash of the URL."
+  },
+  {
+    "id": 15,
+    "keywords": [
+      "tiers",
+      "overlays",
+      "avaliable",
+      "open"
+    ],
+    "question": "Are the overlays open to all tiers?",
+    "answer": "Yes! The overlays are avaliable to all advertising tiers."
   }
 ]

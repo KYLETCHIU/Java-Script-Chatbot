@@ -29,53 +29,100 @@ function firstBotMessage() {
 
 firstBotMessage();
 
-// Retrieves responses
-function getHardResponse(userText) {
-    let botResponse = getBotResponse(userText);
-    let botHtml = '<p class="botText"><span>' + botResponse + '</span></p>';
-    $("#chatbox").append(botHtml);
+// Makes chat collapsible
+var coll = document.getElementsByClassName("collapsible");
 
-    document.getElementById("chat-bar-bottom").scrollIntoView(true);
+for (let i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function () {
+        this.classList.toggle("active");
+
+        var content = this.nextElementSibling;
+
+        if (content.style.maxHeight) {
+            content.style.maxHeight = null;
+        } else {
+            content.style.maxHeight = content.scrollHeight + "px";
+        }
+
+    });
 }
 
-//Grabs text from input box and processes it.
-function getResponse() {
-    let userText = $("#textInput").val();
+let userInput = document.getElementById("textInput");
+let chatHistory = document.getElementById("chatHistory");
+let buttonsDiv = document.getElementById("buttonsDiv");
+let sendBtn = document.getElementById("sendBtn");
+let inputGroup = document.getElementById("inputGroup");
 
-    if (userText == "") {
-        userText = "Please enter ask me a question, or email kyle_t_chiu@homedepot.com";
+
+sendBtn.addEventListener("click", () => {
+    console.log('click');
+    let input = userInput.value;
+
+    if (userInput.value !== '') {
+        postUserInput();
+        getAnswers(input);
+    }  
+})
+
+
+inputGroup.addEventListener("keyup", (e) => {
+    
+    if(e.keyCode === 13){
+        console.log('enter');
+        let input = userInput.value;
+
+        if (userInput.value !== '') {
+            postUserInput();
+            getAnswers(input);
+        }  
     }
+})
 
-    let userHtml = '<p class="userText"><span>' + userText + '</span></p>';
 
-    $("#textInput").val("");
-    $("#chatbox").append(userHtml);
-    document.getElementById("chat-bar-bottom").scrollIntoView(true);
-
-    setTimeout(() => {
-        getHardResponse(userText);
-    }, 1000)
-
-}
-
-// Send via button click
-function buttonSendText(sampleText) {
-    let userHtml = '<p class="userText"><span>' + sampleText + '</span></p>';
-
-    $("#textInput").val("");
-    $("#chatbox").append(userHtml);
-    document.getElementById("chat-bar-bottom").scrollIntoView(true);
-
-}
-
-function sendButton() {
-    getResponse();
+let postUserInput = () => {
+    let input= userInput.value;
+    chatHistory.innerHTML +=`<div class="userText">${input}</div>`;
+    chatHistory.scrollIntoView({block: 'end', behavior: 'smooth'});
+    buttonsDiv.scrollIntoView({block: 'end', behavior: 'smooth'});
+    userInput.value = '';
 }
 
 
-// Send message via enter (return) key
-$("#textInput").keypress(function (e) {
-    if (e.which == 13) {
-        getResponse();
-    }
-});
+// console.log(data);
+
+let getAnswers = (input) => {
+    fetch('bot.json')
+        .then(response => response.json())
+        .then(questions => {
+            //console.log(questions);
+            return searchAnswersInDB(input, questions);
+        })
+        .catch(error => {
+            console.log(error);
+        });
+}
+
+
+let searchAnswersInDB = (input, questions) => {
+
+    // buttonsDiv.innerHTML = ""; 
+
+    for (let question of questions) {
+        if (question.keywords.some( a => input.toLowerCase().includes(a.toLowerCase()))) {
+
+            chatHistory.innerHTML +=`<div class="botText">${question.answer}</div>`;
+
+           
+            chatHistory.scrollIntoView({block: 'end', behavior: 'smooth'});
+            buttonsDiv.scrollIntoView({block: 'end', behavior: 'smooth'});
+                console.log(question);
+            return question;
+
+        } else if (question.keywords.some( a => input.toLowerCase().includes(a.toLowerCase())) === {}) {
+
+            chatHistory.innerHTML +=`<div class="chatBubblesBot">I don't understand this, please be more precise.</div>`;
+        } 
+        
+    }  
+ 
+}

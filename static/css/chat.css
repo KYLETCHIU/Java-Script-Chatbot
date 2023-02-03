@@ -83,8 +83,8 @@
 
 /* Chat bubbles */
 
-#userInput {
-    width: 75%;
+#userInputBox {
+    width: 100%;
 }
 
 .input-box {
@@ -107,19 +107,16 @@
     font-weight: normal;
     text-align: right;
     clear: both;
-}
-
-.userText span {
-    line-height: 1.5em;
-    display: inline-block;
     background: #f86203;
     opacity: .75 !important;
     padding: 10px;
     border-radius: 8px;
     border-bottom-right-radius: 2px;
     max-width: 80%;
-    margin-right: 10px;
-    animation: floatup .5s forwards
+    margin: 10px 10px 0 0;
+    animation: floatup .5s forwards;
+    display: block;
+    float: right;
 }
 
 .botText {
@@ -128,19 +125,21 @@
     font-weight: normal;
     font-size: 16px;
     text-align: left;
-}
-
-.botText span {
-    line-height: 1.5em;
-    display: inline-block;
     background: #e0e0e0;
     padding: 10px;
     border-radius: 8px;
     border-bottom-left-radius: 2px;
     max-width: 80%;
-    margin-left: 10px;
-    animation: floatup .5s forwards
+    margin: 10px 0 0 10px;
+    animation: floatup .5s forwards;
+    display: block;
+    float: left;
 }
+
+#inputGroup {
+    margin-top: 10px;
+}
+
 
 @keyframes floatup {
     from {

@@ -19,7 +19,7 @@ for (let i = 0; i < coll.length; i++) {
 // Grabs and displays first message
 function firstBotMessage() {
     let firstMessage = "How may I assist you?"
-    document.getElementById("botStarterMessage").innerHTML = '<p class="botText"><span>' + firstMessage + '</span></p>';
+    // document.getElementById("botStarterMessage").innerHTML = '<p class="botText"><span>' + firstMessage + '</span></p>';
 
     let time = getTime();
 

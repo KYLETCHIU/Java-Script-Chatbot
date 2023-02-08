@@ -1,33 +1,18 @@
 // Makes chat collapsible
-var coll = document.getElementsByClassName("collapsible");
 
-for (let i = 0; i < coll.length; i++) {
-    coll[i].addEventListener("click", function () {
-        this.classList.toggle("active");
 
-        var content = this.nextElementSibling;
+// // Grabs and displays first message
+// // function firstBotMessage() {
+//     let firstMessage = "How may I assist you?"
+//     // document.getElementById("botStarterMessage").innerHTML = '<p class="botText"><span>' + firstMessage + '</span></p>';
 
-        if (content.style.maxHeight) {
-            content.style.maxHeight = null;
-        } else {
-            content.style.maxHeight = content.scrollHeight + "px";
-        }
+//     let time = getTime();
 
-    });
-}
+//     $("#chat-timestamp").append(time);
+//     document.getElementById("userInput").scrollIntoView(false);
+// // }
 
-// Grabs and displays first message
-function firstBotMessage() {
-    let firstMessage = "How may I assist you?"
-    // document.getElementById("botStarterMessage").innerHTML = '<p class="botText"><span>' + firstMessage + '</span></p>';
-
-    let time = getTime();
-
-    $("#chat-timestamp").append(time);
-    document.getElementById("userInput").scrollIntoView(false);
-}
-
-firstBotMessage();
+//firstBotMessage();
 
 // Makes chat collapsible
 var coll = document.getElementsByClassName("collapsible");
@@ -54,29 +39,6 @@ let sendBtn = document.getElementById("sendBtn");
 let inputGroup = document.getElementById("inputGroup");
 
 
-sendBtn.addEventListener("click", () => {
-    console.log('click');
-    let input = userInput.value;
-
-    if (userInput.value !== '') {
-        postUserInput();
-        getAnswers(input);
-    }  
-})
-
-
-inputGroup.addEventListener("keyup", (e) => {
-    
-    if(e.keyCode === 13){
-        console.log('enter');
-        let input = userInput.value;
-
-        if (userInput.value !== '') {
-            postUserInput();
-            getAnswers(input);
-        }  
-    }
-})
 
 
 let postUserInput = () => {

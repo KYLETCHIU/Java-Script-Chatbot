@@ -1,168 +1,52 @@
-[
+"responses":[
   {
-    "id": 1,
-    "keywords": [
-      "a",
-      "is",
-      "pip"
-    ],
-    "question": "What is a pip?",
-    "answer": "A PIP is a Product Information Page. A pip image is a product silhouetted on a white or transparent background"
+  "response_type": "greeting",
+  "user_input": ["hello", "hi", "hey", "howdy"],
+  "bot_response": "Hey there!",
+  "required_words": []
+},
+{
+  "response_type": "greeting",
+  "user_input": ["see you", "goodbye", "bye"],
+  "bot_response": "See you later!",
+  "required_words": []
+},
+{
+  "response_type": "greeting",
+  "user_input": ["nice", "to", "meet", "you"],
+  "bot_response": "The pleasure is all mine!",
+  "required_words": ["nice", "meet", "you"]
+},
+{
+  "response_type": "question",
+  "user_input": ["why", "can't", "I", "use", "text", "on", "an", "image"],
+  "bot_response": "Text, (also known as copy) does not scale correctly on images in all formats. This can cause the text to blur and not be legible.",
+  "required_words": ["text", "can't", "image"]
+},
+{
+    "response_type": "question",
+    "user_input": ["can", "you", "learn"],
+    "bot_response": "I can learn whatever Homer teaches me.",
+    "required_words": ["you", "learn"]
   },
-  {
-    "id": 2,
-    "keywords": [
-      "hey",
-      "hi",
-      "hello",
-      "howdy"
-    ],
-    "question": "hello",
-    "answer": "Hello. How may I assist you?"
-  },
-  {
-    "id": 3,
-    "keywords": [
-      "lifestyle",
-      "pip",
-      "difference",
-      "between",
-      "templates"
-    ],
-    "question": "What is the difference between the lifestyle and pip templates?",
-    "answer": "Each template is uniquely designed for specific types of images. Lifestyle images scale correctly in lifestyle templates. Product silhouettes fuction properly in pip templates."
-  },
-  {
-    "id": 4,
-    "keywords": [
-      "wrong",
-      "choose",
-      "incorrect",
-      "template",
-      "pick",
-      "select"
-    ],
-    "question": "What happens if I accidentaly choose the wrong template?",
-    "answer": "If the wrong template is selected, simply go back into the smartform, select the correct template that corresponds with your visual asset format, and hit save."
-  },
-  {
-    "id": 5,
-    "keywords": [
-      "nice",
-      "meet"
-    ],
-    "question": "Nice to meet you",
-    "answer": "The pleasure is mine."
-  },
-  {
-    "id": 6,
-    "keywords": [
-      "goodbye",
-      "bye"
-    ],
-    "question": "Goodbye",
-    "answer": "Thanks for the chat. Have a great rest of you day!"
-  },
-  {
-    "id": 7,
-    "keywords": [
-      "thanks",
-      "thank"
-    ],
-    "question": "Thanks",
-    "answer": "You're welcome!"
-  },
-  {
-    "id": 8,
-    "keywords": [
-      "text",
-      "copy",
-      "image"
-    ],
-    "question": "Why can't I use text on an image?",
-    "answer": "Text, (also known as copy) does not scale correctly on images in all formats. This can cause the text to blur and not be legible."
-  },
-  {
-    "id": 9,
-    "keywords": [
-      "template",
-      "change",
-      "select",
-      "type",
-      "choose",
-      "other"
-    ],
-    "question": "How do I change the template type?",
-    "answer": "Once you're in the smartform that you want to use, select the appropriate option under Templated Image Creative."
-  },
-  {
-    "id": 10,
-    "keywords": [
-      "upload",
-      "pip",
-      "use",
-      "product"
-    ],
-    "question": "Can I upload my own product image?",
-    "answer": "Yes. You can do so by uploading it directly into the asset cloud and then selecting the image in the asset cloud explorer, located in the product image dropdown."
-  },
-  {
-    "id": 11,
-    "keywords": [
-      "disapproved",
-      "disapproval",
-      "creatives",
-      "banners"
-    ],
-    "question": "Why are my creatives being disapproved?",
-    "answer": "Creatives are disapproved when they do not meet The Home Depot's Selfe-Serve Creative Approval Brand Standards. Each disapproval generates an automated email that is sent to the person who submited the creative's email. This email contains a comment relevant to the action needed, and the catagory of disapproval type. If you still have questions about these disapprovals, please contact your Home Depot representative."
-  },
-  {
-    "id": 12,
-    "keywords": [
-      "split",
-      "divided",
-      "multiple",
-      "pictures",
-      "images"
-    ],
-    "question": "Why can't I use multiple or split images?",
-    "answer": "Split images do not format correctly in either creative template and lead to blurred or cut off images. The same problem is encountered when multiple images are used. For the best results, please use a single high quality image that matches the format of your selected template. "
-  },
-  {
-    "id": 13,
-    "keywords": [
-      "preview",
-      "see",
-      "view",
-      "creative"
-    ],
-    "question": "How can I see a preview of my creative?",
-    "answer": "On the right side of the smartform there is a box with a live preview of your creative. On the top right of this container there is an icon of a magnifying glass. Click this icon to pull up a larger preview window. From here, click on the dropdown titled Format and select All Formats. This will display a preview of every format your creative can be viewd in. These include desktop, tablet, and mobile sizes. We recommend previewing every creative before you submit it for approval."
-  },
-  {
-    "id": 14,
-    "keywords": [
-      "Product",
-      "id",
-      "ids",
-      "find",
-      "select",
-      "sku",
-      "omsid"
-    ],
-    "question": "Where can I find a product id?",
-    "answer": "A product's ID can be found in the URL of its product landing page (PIP). It is the final set of numbers that are displayed after the last backslash of the URL."
-  },
-  {
-    "id": 15,
-    "keywords": [
-      "tiers",
-      "overlays",
-      "avaliable",
-      "open"
-    ],
-    "question": "Are the overlays open to all tiers?",
-    "answer": "Yes! The overlays are avaliable to all advertising tiers."
+{
+  "response_type": "question",
+  "user_input": ["what", "is", "a", "pip"],
+  "bot_response": "A PIP is a product information page. PIP template creatives use product silhouette immages.",
+  "required_words": ["what", "pip"]
+},
+{
+  "response_type": "question",
+  "user_input": ["how", "are", "you"],
+  "bot_response": "I'm great! Thanks for asking.",
+  "required_words": ["how", "are", "you"]
+},
+{
+    "response_type": "question",
+    "user_input": ["how", "do", "you", "change", "the", "template", "type"],
+    "bot_response": "Go to the drop down on the smartform and select the type of template you would like to use.",
+    "required_words": ["how", "change", "template"]
   }
 ]
+
+  

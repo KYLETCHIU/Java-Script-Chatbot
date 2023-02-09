@@ -125,7 +125,11 @@ let searchAnswersInDB = (input, questions) => {
             i++;
 
             }
-        }     
+        }
+
+
+
+           
         
     }  
  

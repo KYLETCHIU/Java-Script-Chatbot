@@ -30,12 +30,15 @@ for (let i = 0; i < coll.length; i++) {
     });
 }
 
+// setting variables
+
 let userInput = document.getElementById("textInput");
 let chatHistory = document.getElementById("chatHistory");
 let buttonsDiv = document.getElementById("buttonsDiv");
 let sendBtn = document.getElementById("sendBtn");
 let inputGroup = document.getElementById("inputGroup");
 
+// gathering user input on click/enter
 
 sendBtn.addEventListener("click", () => {
     console.log('click');
@@ -61,6 +64,7 @@ inputGroup.addEventListener("keyup", (e) => {
     }
 })
 
+// copying user input to chat history
 
 let postUserInput = () => {
     let input= userInput.value;
@@ -85,6 +89,7 @@ let getAnswers = (input) => {
         });
 }
 
+// Searching answers in JSON 
 
 let searchAnswersInDB = (input, questions) => {
 
@@ -95,22 +100,24 @@ let searchAnswersInDB = (input, questions) => {
         let i = 0;
 
         var allKeys = question.keywords[i];  
-        var allKeysLength = question.keywords.length;
-        var questionsLength = questions.length;
+        var allKeysLength = question.keywords.length; // length of nested keywords array for each question
+        var questionsLength = questions.length; // length of first level array (how many questions we have in our json)
 
-        console.log(input);
+        console.log(input); // user input
         console.log(allKeysLength);
         console.log(questionsLength);
         console.log(allKeys);
         
-        while (i < questionsLength) {
+        // looping through each of the 16 question objects in the array
         
-
+        while (i < questionsLength) {
+                       
+    
             if (question.keywords.some(a => input.toLowerCase().includes(a.toLowerCase()))) {
 
                 chatHistory.innerHTML +=`<div class="botText">${question.answer}</div>`;
             
-            
+     
            
                 chatHistory.scrollIntoView({block: 'end', behavior: 'smooth'});
                 buttonsDiv.scrollIntoView({block: 'end', behavior: 'smooth'});
